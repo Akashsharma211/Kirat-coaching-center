@@ -4,17 +4,34 @@ import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
-  // Detect when the user scrolls down past 80px
   useEffect(() => {
+    // 1. Handle Scroll for Top Navbar
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
     };
+
+    // 2. Intersection Observer to detect Footer
+    // We look for the 'footer' tag or an ID #contacts/footer
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsFooterVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // Trigger when 10% of footer is visible
+    );
+
+    const footerElement = document.querySelector('footer') || document.getElementById('contacts');
+    if (footerElement) observer.observe(footerElement);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (footerElement) observer.unobserve(footerElement);
+    };
   }, []);
 
-  // FIX 1: Changed './' to '#' so they scroll to the sections on the same page
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -23,10 +40,12 @@ export default function Navbar() {
     { name: 'Contacts', href: '#contacts' },
   ];
 
+  // Logic: Show button only if scrolled AND NOT at the footer
+  const showFloatingButton = isScrolled && !isFooterVisible;
+
   return (
     <>
       {/* === TOP NAVBAR === */}
-      {/* FIX 2: Bumped z-40 up to z-50 to prevent the Hero section from blocking clicks */}
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
           isScrolled 
@@ -35,18 +54,15 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          
-          {/* Logo (Also changed to #home) */}
           <a href="#home" className="flex flex-col drop-shadow-md cursor-pointer">
             <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
               KIRAT SIR
             </span>
             <span className="text-[11px] font-bold text-amber-500 uppercase tracking-widest mt-1">
-              Physics Home Tuitions
+              Physics Classes
             </span>
           </a>
 
-          {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-8 font-medium">
             {navLinks.map((link) => (
               <a 
@@ -59,7 +75,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Top Call Button */}
           <a 
             href="tel:+919911525359" 
             className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-5 py-2.5 rounded-lg shadow-lg transition-transform active:scale-95 cursor-pointer"
@@ -69,16 +84,14 @@ export default function Navbar() {
             </svg>
             <span className="hidden sm:inline">Call Now</span>
           </a>
-
         </div>
       </nav>
 
       {/* === FLOATING CONTACT BUTTON === */}
-      {/* Bumped z-50 to z-[60] so it stays above the new navbar z-index */}
       <a 
         href="tel:+919911525359"
         className={`fixed bottom-6 right-6 z-[60] flex items-center gap-3 bg-slate-900 text-white pl-2 pr-5 py-2 rounded-full shadow-2xl shadow-slate-900/50 border-2 border-amber-500 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group hover:scale-105 active:scale-95 cursor-pointer ${
-          isScrolled 
+          showFloatingButton 
             ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' 
             : 'opacity-0 translate-y-12 scale-50 pointer-events-none'
         }`}

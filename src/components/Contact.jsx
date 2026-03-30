@@ -42,13 +42,13 @@ export default function ContactCTA() {
         {/* Top Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* Pulsing Admissions Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-amber-400 text-sm font-bold mb-8 uppercase tracking-wider backdrop-blur-sm">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-amber-400 text-sm font-bold mb-8 uppercase tracking-wider backdrop-blur-sm">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
             </span>
             Admissions Open for New Batch
-          </div>
+          </div> */}
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
             Ready to Excel in Physics?
@@ -120,7 +120,7 @@ export default function ContactCTA() {
                   id="user_name"
                   type="text"
                   name="user_name"
-                  placeholder="John Doe"
+                  placeholder="Type your full name"
                   required
                   className="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all placeholder:text-slate-400 text-slate-900"
                 />
@@ -133,7 +133,7 @@ export default function ContactCTA() {
                     id="user_email"
                     type="email"
                     name="user_email"
-                    placeholder="john@example.com"
+                    placeholder="abc@example.com"
                     required
                     className="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all placeholder:text-slate-400 text-slate-900"
                   />
