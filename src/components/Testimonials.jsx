@@ -149,7 +149,7 @@ export default function Testimonials() {
               className="inline-flex items-center gap-3 px-10 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-2xl shadow-lg shadow-green-100 transition-all font-bold text-lg hover:-translate-y-1"
             >
               <span className="w-3 h-3 rounded-full bg-white animate-pulse"></span>
-              Message Kirat Sir
+              Message Now
             </a>
           </div>
         </div>

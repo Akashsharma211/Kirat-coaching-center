@@ -58,7 +58,7 @@ export default function Experience() {
               </p>
               <div className="bg-slate-50 p-5 rounded-2xl border-l-4 border-amber-500">
                 <p className="text-slate-700 italic">
-                  <strong>My Approach:</strong> I focus on concept clarity rather than rote memorization. By integrating real-life examples with advanced problem-solving techniques, I ensure a strong foundation for NEET and JEE.
+                  <strong>My Approach:</strong> I focus on concept clarity rather than rote memorization. By integrating real-life examples with advanced problem-solving techniques, I ensure a strong foundation in Board Exams, NEET and JEE.
                 </p>
               </div>
             </div>

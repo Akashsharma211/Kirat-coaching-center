@@ -59,8 +59,7 @@ export default function About() {
           </h2>
           <div className="w-24 h-2 bg-amber-500 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            We merge years of teaching excellence with modern methodologies to ensure 
-            you don't just study Physics, you master it.
+            For me, teaching is not just a profession. it is a conscious responsibility in shaping your future.
           </p>
         </div>
 
