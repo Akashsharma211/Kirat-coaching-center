@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex flex-col">
             <a href="#home" className="flex flex-col mb-4">
               <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
-                KIRAT SIR
+                PRABH KIRAT SINGH
               </span>
               <span className="text-[11px] font-bold text-amber-500 uppercase tracking-widest mt-1">
                 Physics Classes
@@ -62,7 +62,7 @@ export default function Footer() {
                 <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
                   <MapPin className="w-4 h-4 text-amber-500" />
                 </div>
-                Chandigarh, India
+                1182, Sector 42B, Chandigarh, 160036
               </div>
               {/* <a href="mailto:contact@kiratsirphysics.com" className="flex items-center gap-3 hover:text-amber-400 transition-colors group">
                 <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-amber-500/50 transition-colors">

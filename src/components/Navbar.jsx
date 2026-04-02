@@ -59,7 +59,7 @@ export default function Navbar() {
   className="flex flex-col items-center justify-center text-center drop-shadow-md cursor-pointer"
 >
   <span className="text-3xl font-extrabold text-white tracking-tight leading-none">
-    KIRAT SIR
+    PRABH KIRAT SINGH
   </span>
   <span className="text-[19px] font-bold text-amber-500 uppercase tracking-widest mt-1">
     Physics Classes

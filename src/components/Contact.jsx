@@ -86,7 +86,7 @@ export default function ContactCTA() {
                 <div className="p-2 rounded-lg bg-white/5 border border-white/10">
                   <MapPin className="w-5 h-5 text-indigo-400" />
                 </div>
-                <span>Chandigarh, India</span>
+                <span>1182, Sector 42B, Chandigarh, 160036</span>
               </div>
             </div>
           </div>
