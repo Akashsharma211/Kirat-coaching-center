@@ -9,16 +9,16 @@ export default function Testimonials() {
   const [showAll, setShowAll] = useState(false);
 
   const screenshots = [
-    { id: 1, src: "./src/assets/ss1.jpeg", alt: "JEE Result", label: "AIR Improved 🚀" },
-    { id: 2, src: "./src/assets/ss2.jpeg", alt: "Board Result", label: "95% in Boards 🔥" },
-    { id: 3, src: "./src/assets/ss3.jpeg", alt: "NEET Physics", label: "Physics Boost 💯" },
-    { id: 4, src: "./src/assets/ss6.jpeg", alt: "Student Feedback", label: "Best Teacher ❤️" },
-    { id: 5, src: "./src/assets/ss5.jpeg", alt: "Parent Review", label: "Parent Trust 🙏" },
-    { id: 6, src: "./src/assets/ss4.jpeg", alt: "Class 12 Result", label: "Fail → 85% 📈" },
-    { id: 7, src: "./src/assets/ss7.jpeg", alt: "Doubt Solving", label: "Doubt Solved 🌙" },
-    { id: 8, src: "./src/assets/ss8.jpeg", alt: "Consistency", label: "Daily Practice 💪" },
-    { id: 9, src: "./src/assets/ss9.jpeg", alt: "Concept Clarity", label: "Crystal Clear ✨" },
-    { id: 10, src: "./src/assets/Gift1.jpeg", alt: "Concept Clarity", label: "Crystal Clear ✨" },
+    { id: 1, src: "./src/assets/ss1.webp", alt: "JEE Result", label: "AIR Improved 🚀" },
+    { id: 2, src: "./src/assets/ss2.webp", alt: "Board Result", label: "95% in Boards 🔥" },
+    { id: 3, src: "./src/assets/ss3.webp", alt: "NEET Physics", label: "Physics Boost 💯" },
+    { id: 4, src: "./src/assets/ss6.webp", alt: "Student Feedback", label: "Best Teacher ❤️" },
+    { id: 5, src: "./src/assets/ss5.webp", alt: "Parent Review", label: "Parent Trust 🙏" },
+    { id: 6, src: "./src/assets/ss4.webp", alt: "Class 12 Result", label: "Fail → 85% 📈" },
+    { id: 7, src: "./src/assets/ss7.webp", alt: "Doubt Solving", label: "Doubt Solved 🌙" },
+    { id: 8, src: "./src/assets/ss8.webp", alt: "Consistency", label: "Daily Practice 💪" },
+    { id: 9, src: "./src/assets/ss9.webp", alt: "Concept Clarity", label: "Crystal Clear ✨" },
+    { id: 10, src: "./src/assets/ss10.webp", alt: "Concept Clarity", label: "Crystal Clear ✨" },
     // Add more if needed...
   ];
 
