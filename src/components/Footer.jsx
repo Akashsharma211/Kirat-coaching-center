@@ -21,7 +21,7 @@ export default function Footer() {
                 KIRAT SIR
               </span>
               <span className="text-[11px] font-bold text-amber-500 uppercase tracking-widest mt-1">
-                Physics Home Tuitions
+                Physics Classes
               </span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs">
@@ -39,9 +39,9 @@ export default function Footer() {
               <a href="#courses" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-slate-700"></span> Courses Offered
               </a>
-              <a href="#features" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
+              {/* <a href="#features" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-slate-700"></span> Study Methodology
-              </a>
+              </a> */}
               <a href="#testimonials" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-slate-700"></span> Success Stories
               </a>
@@ -64,33 +64,50 @@ export default function Footer() {
                 </div>
                 Chandigarh, India
               </div>
-              <a href="mailto:contact@kiratsirphysics.com" className="flex items-center gap-3 hover:text-amber-400 transition-colors group">
+              {/* <a href="mailto:contact@kiratsirphysics.com" className="flex items-center gap-3 hover:text-amber-400 transition-colors group">
                 <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-amber-500/50 transition-colors">
                   <Mail className="w-4 h-4 text-amber-500" />
                 </div>
                 contact@kiratsirphysics.com
-              </a>
+              </a> */}
             </div>
           </div>
 
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Harsh Raj Singh with Akash Kumar Sharma. All rights reserved.
-          </p>
-          
-          <button 
-            onClick={scrollToTop}
-            className="flex items-center gap-2 text-sm font-medium hover:text-amber-400 transition-colors group"
-          >
-            Back to top
-            <div className="p-1.5 rounded-full bg-slate-900 border border-slate-800 group-hover:bg-amber-500 group-hover:text-slate-900 group-hover:border-amber-500 transition-all">
-              <ArrowUp className="w-4 h-4" />
-            </div>
-          </button>
+        <div className="pt-8 border-t border-slate-800 mt-10">
+  {/* Using a 3-column grid on desktop to keep the center text perfectly centered */}
+  <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 text-slate-400">
+    
+    {/* Left: Copyright */}
+    <p className="text-sm text-center md:text-left order-2 md:order-1">
+      © {new Date().getFullYear()} Kirat Sir Physics Coaching. All rights reserved.
+    </p>
+
+    {/* Center: Developers */}
+    <div className="text-sm font-medium text-center order-1 md:order-2">
+      <span className="text-slate-500">Developed by</span>{" "}
+      <span className="text-slate-200">Harsh Raj Singh</span>{" "}
+      <span className="text-indigo-500 mx-1">&</span>{" "}
+      <span className="text-slate-200">Akash</span>
+    </div>
+
+    {/* Right: Scroll Button */}
+    <div className="flex justify-center md:justify-end order-3">
+      <button 
+        onClick={scrollToTop}
+        className="flex items-center gap-3 text-sm font-semibold hover:text-amber-400 transition-all group"
+      >
+        <span className="tracking-wide uppercase text-[10px]">Back to top</span>
+        <div className="p-2 rounded-full bg-slate-900 border border-slate-800 group-hover:bg-amber-500 group-hover:text-slate-900 group-hover:border-amber-500 group-hover:-translate-y-1 transition-all duration-300">
+          <ArrowUp className="w-4 h-4" />
         </div>
+      </button>
+    </div>
+
+  </div>
+</div>
 
       </div>
     </footer>

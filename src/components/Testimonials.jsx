@@ -1,151 +1,146 @@
 "use client";
 
-import React from "react";
-import { Quote, Star, Trophy } from "lucide-react";
+import React, { useState } from "react";
+import { ExternalLink, ZoomIn, X, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Testimonials() {
-  const reviews = [
-    {
-      name: "Saisha Gupta",
-      review: "Kirat sir is an exceptional teacher. His clear explanations and patient teaching helped me build strong concepts from the basics. Highly recommended!",
-      exam: "Class 12",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "Top Result",
-      color: "from-indigo-500 to-purple-600",
-      avatarBg: "bg-indigo-100 text-indigo-700",
-    },
-    {
-      name: "Harmandeep Singh",
-      review: "Amazing learning experience! Sir's effective analogies made grasping complex physics concepts extremely easy. My problem solving improved significantly.",
-      exam: "NEET",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "Great Growth",
-      color: "from-blue-500 to-indigo-600",
-      avatarBg: "bg-blue-100 text-blue-700",
-    },
-    {
-      name: "Khushi Wadhawan",
-      review: "Very patient and engaging teacher. His handwritten notes were a lifesaver for boards. He always makes extra time for student doubts.",
-      exam: "Boards",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "Concept King",
-      color: "from-pink-500 to-rose-600",
-      avatarBg: "bg-rose-100 text-rose-700",
-    },
-    {
-      name: "Vihaan Bansal",
-      review: "Kirat sir explains everything in a very simple manner. His experience is impeccable; almost all board questions were covered in his classes.",
-      exam: "CBSE",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "Board Expert",
-      color: "from-amber-500 to-orange-600",
-      avatarBg: "bg-amber-100 text-amber-700",
-    },
-    {
-      name: "Jiya Bedi",
-      review: "Truly a great mentor who helped me gain a real interest in physics. I would recommend his classes to everyone aiming for high scores.",
-      exam: "Class 12",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "Highly Rated",
-      color: "from-emerald-500 to-teal-600",
-      avatarBg: "bg-emerald-100 text-emerald-700",
-    },
-    {
-      name: "Himank Bahl",
-      review: "More than just a teacher, he is a guru. He makes physics fun to apply in real life and helps students overcome their fear of the subject.",
-      exam: "JEE",
-      score: "★★★★★",
-      scoreType: "Rating",
-      achievement: "True Mentor",
-      color: "from-violet-500 to-indigo-600",
-      avatarBg: "bg-violet-100 text-violet-700",
-    },
+  const [selectedImg, setSelectedImg] = useState(null);
+  // State to handle the "View More" toggle
+  const [showAll, setShowAll] = useState(false);
+
+  const screenshots = [
+    { id: 1, src: "./src/assets/ss1.jpeg", alt: "JEE Result", label: "AIR Improved 🚀" },
+    { id: 2, src: "./src/assets/ss2.jpeg", alt: "Board Result", label: "95% in Boards 🔥" },
+    { id: 3, src: "./src/assets/ss3.jpeg", alt: "NEET Physics", label: "Physics Boost 💯" },
+    { id: 4, src: "./src/assets/ss6.jpeg", alt: "Student Feedback", label: "Best Teacher ❤️" },
+    { id: 5, src: "./src/assets/ss5.jpeg", alt: "Parent Review", label: "Parent Trust 🙏" },
+    { id: 6, src: "./src/assets/ss4.jpeg", alt: "Class 12 Result", label: "Fail → 85% 📈" },
+    { id: 7, src: "./src/assets/ss7.jpeg", alt: "Doubt Solving", label: "Doubt Solved 🌙" },
+    { id: 8, src: "./src/assets/ss8.jpeg", alt: "Consistency", label: "Daily Practice 💪" },
+    { id: 9, src: "./src/assets/ss9.jpeg", alt: "Concept Clarity", label: "Crystal Clear ✨" },
+    { id: 10, src: "./src/assets/Gift1.jpeg", alt: "Concept Clarity", label: "Crystal Clear ✨" },
+    // Add more if needed...
   ];
 
-  const getInitials = (name) => {
-    return name.split(" ").map((n) => n[0]).join("").toUpperCase();
-  };
-
-  const doubledReviews = [...reviews, ...reviews];
+  // Logic to slice the array
+  const INITIAL_COUNT = 6;
+  const visibleScreenshots = showAll ? screenshots : screenshots.slice(0, INITIAL_COUNT);
 
   return (
-    <section className="py-16 bg-slate-50 overflow-hidden" id="testimonials">
-      <style>
-        {`
-          @keyframes infinite-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-infinite-scroll {
-            animation: infinite-scroll 35s linear infinite;
-          }
-          .animate-infinite-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}
-      </style>
+    <section className="py-20 px-6 bg-slate-50" id="testimonials">
+      <div className="max-w-7xl mx-auto">
 
-      <div className="w-full inline-flex flex-nowrap overflow-hidden">
-        <div className="flex items-stretch gap-6 w-max animate-infinite-scroll py-10">
-          {doubledReviews.map((student, index) => (
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
+            Wall of <span className="text-indigo-600">Results</span>
+          </h2>
+          <p className="text-slate-500 text-lg max-w-xl mx-auto">
+            Real chats. Real results. Real students winning.
+          </p>
+        </div>
+
+        {/* Masonry Grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 transition-all duration-700 ease-in-out">
+          {visibleScreenshots.map((ss) => (
             <div
-              key={index}
-              className="relative w-[300px] flex-shrink-0 bg-white p-6 pt-10 rounded-2xl border border-slate-200 flex flex-col transition-all hover:shadow-lg hover:-translate-y-1"
+              key={ss.id}
+              className="relative group break-inside-avoid rounded-2xl overflow-hidden border-4 border-white shadow-sm hover:shadow-2xl transition-all duration-300 bg-white cursor-pointer animate-in fade-in zoom-in duration-500"
+              onClick={() => setSelectedImg(ss.src)}
             >
-              {/* INITIAL AVATAR */}
-              <div className="absolute -top-6 left-6">
-                <div className={`w-14 h-14 rounded-full border-4 border-white shadow-sm flex items-center justify-center font-bold text-lg ${student.avatarBg}`}>
-                  {getInitials(student.name)}
-                  <div className="absolute -bottom-1 -right-1 bg-amber-500 text-white p-1 rounded-full border border-white">
-                    <Quote className="w-2 h-2 fill-current" />
-                  </div>
-                </div>
+              <img
+                src={ss.src}
+                alt={ss.alt}
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                loading="lazy"
+                onError={(e) => {
+                  e.target.src = `https://via.placeholder.com/400x500?text=${ss.label}`;
+                }}
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-indigo-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center">
+                <ZoomIn className="text-white w-10 h-10 mb-2 scale-75 group-hover:scale-100 transition" />
+                <span className="text-white font-bold text-lg uppercase tracking-widest text-center px-4">
+                  {ss.label}
+                </span>
               </div>
 
-              <div className="flex gap-0.5 text-amber-400 mb-2 ml-16">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-current" />
-                ))}
-              </div>
-
-              <h3 className="text-base font-bold text-slate-900 mb-1">
-                {student.name}
-              </h3>
-
-              <p className="text-xs text-slate-600 italic mb-4 flex-grow leading-relaxed">
-                "{student.review}"
-              </p>
-
-              <div className="mt-auto bg-slate-50 rounded-lg p-3 border border-slate-100 group">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <span className="text-[8px] font-bold uppercase text-slate-400 block tracking-wider">
-                      {student.scoreType}
-                    </span>
-                    <span className="text-sm font-bold text-amber-500">
-                      {student.score}
-                    </span>
-                  </div>
-
-                  <div className="text-right">
-                    <span className="inline-block px-1.5 py-0.5 bg-indigo-50 text-indigo-600 text-[8px] font-black rounded uppercase mb-1">
-                      {student.exam}
-                    </span>
-                    <div className="flex items-center justify-end gap-1 text-[10px] font-bold text-slate-700">
-                      <Trophy className="w-2.5 h-2.5 text-amber-500" />
-                      {student.achievement}
-                    </div>
-                  </div>
-                </div>
+              {/* Mobile Label */}
+              <div className="p-3 bg-white flex justify-between items-center md:hidden border-t">
+                <span className="font-bold text-slate-700 text-sm">{ss.label}</span>
+                <ExternalLink className="w-4 h-4 text-slate-400" />
               </div>
             </div>
           ))}
         </div>
+
+       {/* Stylish View More / Show Less Toggle */}
+{screenshots.length > INITIAL_COUNT && (
+  <div className={`relative ${!showAll ? "-mt-40" : "mt-12"} text-center transition-all duration-500`}>
+    
+    {/* The Gradient Fade - Only visible when not showing all */}
+    {!showAll && (
+      <div className="h-40 w-full bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent pointer-events-none" />
+    )}
+
+    <div 
+      onClick={() => setShowAll(!showAll)}
+      className="group relative inline-flex cursor-pointer items-center justify-center px-10 py-4 overflow-hidden font-bold transition-all duration-300"
+    >
+      {/* Animated Background Glow */}
+      <div className="absolute inset-0 w-full h-full bg-slate-200/50 rounded-full group-hover:bg-indigo-50 transition-colors duration-300"></div>
+      
+      {/* Floating Elements */}
+      <div className="relative flex items-center gap-3 text-slate-700 group-hover:text-indigo-600 transition-colors duration-300">
+        <span className="uppercase tracking-[0.2em] text-sm">
+          {showAll ? "Collapse Grid" : "Explore More Proof"}
+        </span>
+        
+        <div className={`transition-transform duration-500 ${showAll ? "rotate-180" : "animate-bounce"}`}>
+          <ChevronDown size={20} strokeWidth={3} />
+        </div>
+      </div>
+
+      {/* Decorative Border Underline */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-indigo-500 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+    </div>
+  </div>
+)}
+        {/* Modal (Zoom View) */}
+        {selectedImg && (
+          <div 
+            className="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4 backdrop-blur-sm"
+            onClick={() => setSelectedImg(null)}
+          >
+            <button className="absolute top-6 right-6 text-white hover:rotate-90 transition-transform">
+              <X size={40} />
+            </button>
+            <img
+              src={selectedImg}
+              alt="Preview"
+              className="max-h-[90vh] max-w-full rounded-lg shadow-2xl animate-in zoom-in duration-300"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
+            />
+          </div>
+        )}
+
+        {/* Bottom CTA */}
+        <div className="mt-20 text-center border-t border-slate-200 pt-10">
+          <p className="text-slate-400 mb-4 font-medium uppercase tracking-widest text-xs">Still have doubts?</p>
+          <div className="inline-block p-1 rounded-full bg-slate-200/50">
+            <a
+              href="https://wa.me/919911525359"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-8 py-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-slate-700 font-bold"
+            >
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              Get in Touch on WhatsApp
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );

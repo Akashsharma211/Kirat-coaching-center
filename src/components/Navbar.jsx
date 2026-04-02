@@ -54,26 +54,29 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          <a href="#home" className="flex flex-col drop-shadow-md cursor-pointer">
-            <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
-              KIRAT SIR
-            </span>
-            <span className="text-[11px] font-bold text-amber-500 uppercase tracking-widest mt-1">
-              Physics Classes
-            </span>
-          </a>
+         <a
+  href="#home"
+  className="flex flex-col items-center justify-center text-center drop-shadow-md cursor-pointer"
+>
+  <span className="text-3xl font-extrabold text-white tracking-tight leading-none">
+    KIRAT SIR
+  </span>
+  <span className="text-[19px] font-bold text-amber-500 uppercase tracking-widest mt-1">
+    Physics Classes
+  </span>
+</a>
 
           <div className="hidden lg:flex items-center gap-8 font-medium">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="text-slate-100 hover:text-amber-400 transition-colors drop-shadow-md cursor-pointer"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+  {navLinks.map((link) => (
+    <a
+      key={link.name}
+      href={link.href}
+      className="text-xl font-semibold text-slate-100 hover:text-amber-400 transition-colors drop-shadow-md cursor-pointer"
+    >
+      {link.name}
+    </a>
+  ))}
+</div>
 
           <a 
             href="tel:+919911525359" 

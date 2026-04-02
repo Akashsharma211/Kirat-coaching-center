@@ -1,12 +1,12 @@
 import React from 'react';
 import { Award, BookOpen, CheckCircle, GraduationCap, Target, Users } from 'lucide-react';
-import kiratImage from '../assets/kirat.jpeg'; 
+import kiratImage from '../assets/kirat.jpeg';
 
 export default function Experience() {
   return (
     <section className="py-20 px-6 bg-white" id="experience">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-indigo-950 tracking-tight mb-4">
@@ -17,18 +17,18 @@ export default function Experience() {
 
         {/* Top Section: Photo & Bio */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
-          
+
           {/* Left: Teacher Image - Constrained Size */}
           <div className="lg:col-span-5 max-w-md mx-auto lg:mx-0 relative group">
             <div className="absolute -inset-3 bg-indigo-50 rounded-3xl transform rotate-2 transition-transform duration-300 group-hover:rotate-0"></div>
-            
-            <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white aspect-[4/5]">
+
+            <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white aspect-[6/9]">
               <img
-                src={kiratImage} 
+                src={kiratImage}
                 alt="Prabh Kirat Singh"
                 className="w-full h-full object-cover object-top"
               />
-              
+
               {/* Floating Badge */}
               <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-md border border-slate-100 flex items-center gap-3">
                 <div className="bg-amber-100 p-2 rounded-lg text-amber-600">
@@ -50,10 +50,11 @@ export default function Experience() {
             <p className="text-lg font-semibold text-amber-500 mb-6">
               Senior Physics Faculty & Concept Specialist
             </p>
-            
+
             <div className="space-y-5 text-slate-600 leading-relaxed mb-8">
               <p className="text-lg">
-                With over a decade and a half of dedicated teaching experience, I specialize in demystifying physics for students. My goal is to transform the subject from a source of anxiety into a subject of logic and scoring potential.
+                I'm Prabh Kirat Singh, a passionate physics educator with over 15 years of experience in guiding students to excel in CBSE 11th, 12th, NEET, JEE, and Advanced Placement exams. My expertise lies in simplifying complex concepts, making physics fun and accessible to all.
+                With a proven track record of exemplary results, I've helped countless students achieve their dreams of top scores and secure admissions to prestigious institutions. My approach focuses on building a strong foundation, concept clarity, and quick solving tricks.With over a decade and a half of dedicated teaching experience, I specialize in demystifying physics for students. My goal is to transform the subject from a source of anxiety into a subject of logic and scoring potential.
               </p>
               <div className="bg-slate-50 p-5 rounded-2xl border-l-4 border-amber-500">
                 <p className="text-slate-700 italic">
@@ -89,7 +90,7 @@ export default function Experience() {
         {/* Bottom Section: Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Qualifications Card */}
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          {/* <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center">
                 <GraduationCap className="w-5 h-5" />
@@ -109,10 +110,10 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Experience Card */}
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          {/* <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
                 <Award className="w-5 h-5" />
@@ -132,7 +133,7 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
       </div>

@@ -34,6 +34,28 @@ export default function Courses() {
         </svg>
       ),
       color: "bg-amber-600",
+    },
+    {
+      title: "Board + NEET",
+      badge: "Integrated Medical",
+      description: "A comprehensive dual-track program covering both CBSE Board syllabus and NEET-specific competitive physics in one unified course.",
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+      color: "bg-emerald-600",
+    },
+    {
+      title: "Board + JEE",
+      badge: "Integrated Jee",
+      description: "Seamlessly bridge the gap between Board concepts and JEE logic. Expertly designed to maximize efficiency for engineering aspirants.",
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      color: "bg-purple-600",
     }
   ];
 
@@ -52,39 +74,38 @@ export default function Courses() {
           </p>
         </div>
 
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Courses Grid - Optimized for 5 items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {courses.map((course, index) => (
             <div 
               key={index} 
-              className="group relative bg-slate-50 border border-slate-200 p-8 rounded-2xl overflow-hidden hover:border-indigo-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-out"
+              className="group relative flex flex-col bg-slate-50 border border-slate-200 p-6 rounded-2xl overflow-hidden hover:border-indigo-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-out"
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="flex justify-between items-start mb-6">
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-lg ${course.color} transform group-hover:rotate-6 transition-transform duration-300`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-lg ${course.color} transform group-hover:rotate-6 transition-transform duration-300 flex-shrink-0`}>
                   {course.icon}
                 </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 text-slate-700 text-[10px] font-black uppercase tracking-[0.1em]">
+                <span className="inline-flex items-center px-2 py-1 rounded-full bg-slate-200 text-slate-700 text-[9px] font-black uppercase tracking-[0.1em]">
                   {course.badge}
                 </span>
               </div>
 
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {course.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed mb-10">
+              <p className="text-sm text-slate-600 leading-relaxed mb-8">
                 {course.description}
               </p>
 
-              {/* Updated Action Link: No Demo Mention */}
-              <div className="mt-auto pt-6 border-t border-slate-200">
+              <div className="mt-auto pt-4 border-t border-slate-200">
                 <a 
                   href="tel:+919911525359" 
-                  className="inline-flex items-center text-indigo-600 font-bold group-hover:text-amber-600 transition-colors tracking-wide"
+                  className="inline-flex items-center text-sm text-indigo-600 font-bold group-hover:text-amber-600 transition-colors tracking-wide"
                 >
-                  Inquire for Batch Details
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  Inquire Now
+                  <svg className="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
