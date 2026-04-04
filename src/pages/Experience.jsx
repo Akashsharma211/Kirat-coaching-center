@@ -4,7 +4,7 @@ import kiratImage from '../assets/kirat.jpeg';
 
 export default function Experience() {
   return (
-    <section className="py-20 px-6 bg-white" id="experience">
+    <section className="py-10 px-4 bg-white" id="experience">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -16,7 +16,7 @@ export default function Experience() {
         </div>
 
         {/* Top Section: Photo & Bio */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-1 px=10 py=4">
 
           {/* Left: Teacher Image - Constrained Size */}
           <div className="lg:col-span-5 max-w-md mx-auto lg:mx-0 relative group">
@@ -53,8 +53,7 @@ export default function Experience() {
 
             <div className="space-y-5 text-slate-600 leading-relaxed mb-8">
               <p className="text-lg">
-                I'm Prabh Kirat Singh, a passionate physics educator with over 15 years of experience in guiding students to excel in CBSE 11th, 12th, NEET, JEE, and Advanced Placement exams. My expertise lies in simplifying complex concepts, making physics fun and accessible to all.
-                With a proven track record of exemplary results, I've helped countless students achieve their dreams of top scores and secure admissions to prestigious institutions. My approach focuses on building a strong foundation, concept clarity, and quick solving tricks.With over a decade and a half of dedicated teaching experience, I specialize in demystifying physics for students. My goal is to transform the subject from a source of anxiety into a subject of logic and scoring potential.
+
               </p>
               <div className="bg-slate-50 p-5 rounded-2xl border-l-4 border-amber-500">
                 <p className="text-slate-700 italic">
@@ -62,9 +61,17 @@ export default function Experience() {
                 </p>
               </div>
             </div>
+            {/* Add this right before the Quick Stats Bar */}
+            <div className="relative py-4 mb-3 border-t border-slate-200">
+              {/* <span className="absolute -top-2 -left-3 text-6xl text-amber-500/20 font-serif">“</span> */}
+              <p className="text-xl md:text-2xl font-medium text-indigo-950 leading-tight tracking-tight italic">
+                For me, teaching is not just a profession. It is a <span className="text-amber-600 font-bold underline decoration-amber-200 underline-offset-4">conscious responsibility</span> in shaping your future.
+              </p>
+              {/* <span className="absolute -top-2 -left-3 text-6xl text-amber-500/20 font-serif"></span> */}
+            </div>
 
             {/* Quick Stats Bar */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-slate-100">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-6 border-t border-slate-100">
               <div className="flex flex-col">
                 <span className="text-2xl font-black text-indigo-900">1000+</span>
                 <span className="text-xs font-bold text-slate-500 flex items-center gap-1.5 uppercase tracking-wide">
@@ -78,7 +85,7 @@ export default function Experience() {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-indigo-900">JEE/NEET/CBSE</span>
+                <span className="text-2xl font-black text-indigo-900">JEE/NEET/BOARDS</span>
                 <span className="text-xs font-bold text-slate-500 flex items-center gap-1.5 uppercase tracking-wide">
                   <BookOpen className="w-3.5 h-3.5 text-amber-500" /> Expertise
                 </span>

@@ -20,20 +20,20 @@ export default function Footer() {
               <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
                 PRABH KIRAT SINGH
               </span>
-              <span className="text-[11px] font-bold text-amber-500 uppercase tracking-widest mt-1">
-                Physics Classes
+              <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
+                PHYSICS CLASSES
               </span>
             </a>
-            <p className="text-sm leading-relaxed max-w-xs">
-              Empowering students with strong concept clarity and quick-solving techniques to achieve top ranks in CBSE, NEET, and JEE.
-            </p>
+            {/* <p className="text-sm leading-relaxed max-w-xs">
+              Empowering students with strong concept clarity and quick-solving techniques to achieve top ranks in Boards, NEET, and JEE.
+            </p> */}
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
             <nav className="flex flex-col gap-3 text-sm">
-              <a href="#about" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
+              <a href="#experience" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-slate-700"></span> About Sir
               </a>
               <a href="#courses" className="hover:text-amber-400 transition-colors inline-flex items-center gap-2">
@@ -82,15 +82,15 @@ export default function Footer() {
     
     {/* Left: Copyright */}
     <p className="text-sm text-center md:text-left order-2 md:order-1">
-      © {new Date().getFullYear()} Kirat Sir Physics Coaching. All rights reserved.
+      © {new Date().getFullYear()} Prabh Kirat Singh Physics Classes. All rights reserved.
     </p>
 
     {/* Center: Developers */}
     <div className="text-sm font-medium text-center order-1 md:order-2">
       <span className="text-slate-500">Developed by</span>{" "}
-      <span className="text-slate-200">Harsh Raj Singh</span>{" "}
+      <span className="text-slate-200"><a href="https://github.com/HarshGRS">Harsh Raj Singh</a></span>{" "}
       <span className="text-indigo-500 mx-1">&</span>{" "}
-      <span className="text-slate-200">Akash</span>
+      <span className="text-slate-200"><a href="https://github.com/Akashsharma211">Akash Kumar Sharma</a></span>{" "}
     </div>
 
     {/* Right: Scroll Button */}

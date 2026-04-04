@@ -35,7 +35,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Reviews', href: '#testimonials' },
     { name: 'Experience', href: '#experience' },
     { name: 'Contacts', href: '#contacts' },
   ];
@@ -58,11 +58,11 @@ export default function Navbar() {
   href="#home"
   className="flex flex-col items-center justify-center text-center drop-shadow-md cursor-pointer"
 >
-  <span className="text-3xl font-extrabold text-white tracking-tight leading-none">
+  <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
     PRABH KIRAT SINGH
   </span>
-  <span className="text-[19px] font-bold text-amber-500 uppercase tracking-widest mt-1">
-    Physics Classes
+  <span className="text-2xl font-extrabold text-white tracking-tight leading-none">
+    PHYSICS CLASSES
   </span>
 </a>
 

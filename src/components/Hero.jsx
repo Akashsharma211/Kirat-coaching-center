@@ -3,21 +3,21 @@ import bgVideo from "../assets/bg-video.webm";
 export default function Hero() {
   const fears = [
     {
-      title: "Are you struggling with Physics concepts ?",
+      title: "📚Are you struggling with Physics concepts ?",
       // desc: "Are you struggling with physics ?",
-      icon: "📚",
+      
       border: "hover:border-blue-500/50"
     },
     {
-      title: "Do you get anxious while solving numericals ?",
+      title: "🧮Do you get anxious while solving numericals ?",
       // desc: "Do you get anxious while solving numericals ?",
-      icon: "🧮",
+     
       border: "hover:border-red-500/50"
     },
     {
-      title: "Do yo feel you are lagging conceptually in Physics and the pile is increasing with each passing day ?",
+      title: "⏳Do you feel you are lagging in Physics and this backlog is increasing with each passing day ?",
       // desc: "Do yo feel you are lagging conceptually in physics?",
-      icon: "⏳",
+      
       border: "hover:border-amber-500/50"
     },
   ];
@@ -59,9 +59,9 @@ export default function Hero() {
           </div> */}
 
           <h1 className="text-4xl md:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight">
-            Remove these fears with <br />
+            Remove your fears with <br />
             <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
-              Kirat Sir’s Expert Guidance
+              Prabh Kirat Singh Expert Guidance
             </span>
             <br />
             and achieve your academic goals.
@@ -78,7 +78,7 @@ export default function Hero() {
               ENROLL FOR 2026-27
             </button>
              */}
-            <div className="flex items-center gap-4 bg-white/5 py-2 px-4 rounded-full border border-white/10 backdrop-blur-sm">
+            {/* <div className="flex items-center gap-4 bg-white/5 py-2 px-4 rounded-full border border-white/10 backdrop-blur-sm">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((n) => (
                   <div key={n} className="w-8 h-8 rounded-full border-2 border-slate-900 bg-amber-500 flex items-center justify-center text-[10px] text-slate-900 font-bold">✓</div>
@@ -87,11 +87,11 @@ export default function Hero() {
               <p className="text-sm text-slate-300">
                 <span className="text-white font-bold">500+</span> Enrolled
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* 4. INSTITUTE STATS */}
-          <div className="mt-24 grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-t border-white/10">
+          {/* <div className="mt-24 grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-t border-white/10">
             {[
               { label: "Conceptual Clarity", val: "100%" },
               { label: "Numerical Practice", val: "Daily" },
@@ -103,7 +103,7 @@ export default function Hero() {
                 <div className="text-[10px] md:text-xs text-amber-500/70 uppercase font-bold tracking-widest mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
 
         </div>
       </div>
