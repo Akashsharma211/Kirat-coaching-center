@@ -5,19 +5,19 @@ export default function Hero() {
     {
       title: "📚Are you struggling with Physics concepts ?",
       // desc: "Are you struggling with physics ?",
-      
+
       border: "hover:border-blue-500/50"
     },
     {
       title: "🧮Do you get anxious while solving numericals ?",
       // desc: "Do you get anxious while solving numericals ?",
-     
+
       border: "hover:border-red-500/50"
     },
     {
       title: "⏳Do you feel you are lagging in Physics and this backlog is increasing with each passing day ?",
       // desc: "Do yo feel you are lagging conceptually in physics?",
-      
+
       border: "hover:border-amber-500/50"
     },
   ];
@@ -39,18 +39,41 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-6xl mx-auto">
 
         {/* 1. THE CARDS (Now with better spacing for the top of the page) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {fears.map((fear, i) => (
-            <div
-              key={i}
-              className={`bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl transition-all duration-300 group ${fear.border}`}
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{fear.icon}</div>
-              <h3 className="text-amber-400 font-bold text-xl mb-2">{fear.title}</h3>
-              {/* <p className="text-slate-400 text-sm leading-relaxed">{fear.desc}</p> */}
-            </div>
-          ))}
-        </div>
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 mb-16 px-4 md:px-0 items-stretch">
+  {fears.map((fear, i) => (
+    <div
+      key={i}
+      className={`
+        bg-white/5 backdrop-blur-md border border-white/10 
+        p-5 sm:p-6 md:p-8 rounded-2xl 
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300 ease-out
+        group
+        transform scale-[1.02] md:scale-100
+        active:scale-[0.96] md:hover:scale-[1.06]
+        flex flex-col items-center md:items-start text-center md:text-left h-full
+        ${fear.border}
+      `}
+    >
+      {/* Icon */}
+      <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-125 transition-transform duration-300">
+        {fear.icon}
+      </div>
+
+      {/* Title */}
+      <h3 className="text-amber-400 font-semibold text-base sm:text-lg md:text-xl mb-2 leading-snug">
+        {fear.title}
+      </h3>
+
+      {/* Description */}
+      {fear.desc && (
+        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity max-w-[280px] md:max-w-none">
+          {fear.desc}
+        </p>
+      )}
+    </div>
+  ))}
+</div>
 
         {/* 2. THE CONTENT */}
         <div className="text-center">
@@ -61,7 +84,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight">
             Remove your fears with <br />
             <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
-              Prabh Kirat Singh Expert Guidance
+              Prabh Kirat Sir's Expert Guidance
             </span>
             <br />
             and achieve your academic goals.
